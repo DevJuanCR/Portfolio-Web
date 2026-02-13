@@ -3,7 +3,7 @@ import { FaStar, FaCodeBranch, FaExternalLinkAlt } from 'react-icons/fa'
 
 const GITHUB_USER = 'DevJuanCR'
 
-// colores oficiales de github para cada lenguaje
+// colores oficiales de github para la barra de lenguajes
 const langColors = {
   Java: '#b07219',
   JavaScript: '#f1e05a',
@@ -36,7 +36,7 @@ function Projects() {
         (repo) => !repo.fork && repo.name !== 'Portfolio-Web'
       )
 
-      // para cada repo traemos el desglose de lenguajes
+      // para cada repo sacamos el desglose de lenguajes
       const reposWithLangs = await Promise.all(
         filtered.map(async (repo) => {
           const langRes = await fetch(repo.languages_url)
@@ -53,13 +53,14 @@ function Projects() {
     }
   }
 
+  // convertimos los bytes de cada lenguaje a porcentaje
   function getLangPercentages(languages) {
     const total = Object.values(languages).reduce((sum, val) => sum + val, 0)
     if (total === 0) return []
     return Object.entries(languages).map(([name, bytes]) => ({
       name,
       percentage: ((bytes / total) * 100).toFixed(1),
-      color: langColors[name] || '#8b8b8b',
+      color: langColors[name] || '#8b8b8b', // gris si no tenemos el color
     }))
   }
 
@@ -67,8 +68,8 @@ function Projects() {
     return (
       <section id="projects" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-100 mb-12">Projects</h2>
-          <p className="text-slate-400">Loading projects from GitHub...</p>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">Projects</h2>
+          <p className="text-slate-500 dark:text-slate-400">Loading projects from GitHub...</p>
         </div>
       </section>
     )
@@ -78,8 +79,8 @@ function Projects() {
     return (
       <section id="projects" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-100 mb-12">Projects</h2>
-          <p className="text-red-400">Could not load projects right now</p>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">Projects</h2>
+          <p className="text-red-500 dark:text-red-400">Could not load projects right now</p>
         </div>
       </section>
     )
@@ -88,7 +89,7 @@ function Projects() {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
           Projects
         </h2>
 
@@ -98,27 +99,28 @@ function Projects() {
             return (
               <div
                 key={repo.id}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors"
+                className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-slate-100">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                     {repo.name}
                   </h3>
                   <a
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-blue-400 transition-colors"
+                    className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     <FaExternalLinkAlt />
                   </a>
                 </div>
 
-                <p className="text-slate-400 text-sm mb-4">
+                <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
                   {repo.description || 'No description'}
                 </p>
 
-                <div className="flex items-center gap-4 text-sm text-slate-500 mb-4">
+                {/* estrellas y forks del repo */}
+                <div className="flex items-center gap-4 text-sm text-slate-400 dark:text-slate-500 mb-4">
                   <span className="flex items-center gap-1">
                     <FaStar /> {repo.stargazers_count}
                   </span>
@@ -142,11 +144,12 @@ function Projects() {
                         />
                       ))}
                     </div>
+                    {/* leyenda con los colores de cada lenguaje */}
                     <div className="flex flex-wrap gap-3">
                       {langs.map((lang) => (
                         <span
                           key={lang.name}
-                          className="flex items-center gap-1 text-xs text-slate-400"
+                          className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400"
                         >
                           <span
                             className="w-2 h-2 rounded-full"

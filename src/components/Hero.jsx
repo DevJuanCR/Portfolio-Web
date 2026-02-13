@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
+// los links de redes que aparecen debajo del nombre
 const socialLinks = [
   { icon: <FaGithub />, href: 'https://github.com/DevJuanCR', label: 'GitHub' },
   { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/devjuancr', label: 'LinkedIn' },
@@ -11,15 +12,15 @@ function Hero() {
     <section id="hero" className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-2xl">
 
-        <p className="text-blue-400 text-lg mb-2 font-medium">
+        <p className="text-blue-600 dark:text-blue-400 text-lg mb-2 font-medium">
           Hey, I'm
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-slate-100 mb-4">
+        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-4">
           Juan Carlos
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-slate-400 mb-8">
+        <h2 className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8">
           Junior Developer · Java · Python · JavaScript
         </h2>
 
@@ -30,8 +31,8 @@ function Hero() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-blue-400 text-2xl transition-colors"
-              aria-label={link.label}
+              className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition-colors"
+              aria-label={link.label} // accesibilidad para lectores de pantalla
             >
               {link.icon}
             </a>
