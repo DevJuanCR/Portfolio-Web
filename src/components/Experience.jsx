@@ -1,36 +1,40 @@
-// experiencias ordenadas de mas reciente a mas antigua
-const experiences = [
-  {
-    role: 'Web Developer',
-    company: 'Infomesidess, Reus',
-    date: 'Sept 2024 — Apr 2025',
-    badge: 'FCT Internship',
-    tasks: [
-      'Built corporate websites and e-commerce stores with WordPress and WooCommerce',
-      'Backend customization with PHP and server configuration (.htaccess)',
-      'Performance optimization: improved load times and Core Web Vitals',
-    ],
-  },
-  {
-    role: 'IT Support & Systems Technician',
-    company: 'OneSystem IT-Servicios',
-    date: 'May 2022 — Sept 2022',
-    badge: 'FCT Internship',
-    tasks: [
-      'Windows/Linux workstation administration and local network setup',
-      'Hardware diagnostics and Level 1/2 incident resolution',
-      'Deployment and configuration of end-user work environments',
-    ],
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 function Experience() {
+  const { t } = useTranslation()
+
+  // sacamos los datos de experiencia de las traducciones
+  const experiences = [
+    {
+      role: t('experience.job1.role'),
+      company: t('experience.job1.company'),
+      date: t('experience.job1.date'),
+      badge: t('experience.job1.badge'),
+      tasks: [
+        t('experience.job1.task1'),
+        t('experience.job1.task2'),
+        t('experience.job1.task3'),
+      ],
+    },
+    {
+      role: t('experience.job2.role'),
+      company: t('experience.job2.company'),
+      date: t('experience.job2.date'),
+      badge: t('experience.job2.badge'),
+      tasks: [
+        t('experience.job2.task1'),
+        t('experience.job2.task2'),
+        t('experience.job2.task3'),
+      ],
+    },
+  ]
+
   return (
     <section id="experience" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
 
         <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
-          Experience
+          {t('experience.title')}
         </h2>
 
         <div className="relative">

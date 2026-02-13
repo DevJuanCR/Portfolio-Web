@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "Despre mine",
+    "stack": "Stack",
+    "projects": "Proiecte",
+    "experience": "Experiență",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Salut, sunt",
+    "subtitle": "Dezvoltator Junior · Java · Python · JavaScript"
+  },
+  "about": {
+    "title": "Despre mine",
+    "p1": "Dezvoltator Junior cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă (DAM)</highlight> și <highlight>Sisteme Microinformatice și Rețele (SMR)</highlight>.",
+    "p2": "Construiesc servicii backend cu Java și Spring Boot, dezvolt instrumente și aplicații cu Python și creez frontend-uri interactive cu JavaScript și React.",
+    "p3": "Lucrez cu Docker, pipeline-uri CI/CD și medii Linux. Îmi place să construiesc soluții reale și să învăț ce e nevoie pe parcurs."
+  },
+  "stack": {
+    "title": "Stack Tehnic",
+    "languages": "Limbaje",
+    "frameworks": "Framework-uri și Biblioteci",
+    "devops": "DevOps și Instrumente"
+  },
+  "projects": {
+    "title": "Proiecte",
+    "loading": "Se încarcă proiectele de pe GitHub...",
+    "error": "Nu s-au putut încărca proiectele.",
+    "noDescription": "Fără descriere"
+  },
+  "experience": {
+    "title": "Experiență",
+    "job1": {
+      "role": "Dezvoltator Web",
+      "company": "Infomesidess, Reus",
+      "date": "Sept 2024 — Apr 2025",
+      "badge": "Stagiu FCT",
+      "task1": "Crearea de site-uri web corporative și e-commerce cu WordPress și WooCommerce.",
+      "task2": "Personalizarea backend-ului cu PHP și configurarea serverului (.htaccess).",
+      "task3": "Optimizarea performanței: îmbunătățirea timpurilor de încărcare și Core Web Vitals."
+    },
+    "job2": {
+      "role": "Tehnician Suport IT și Sisteme",
+      "company": "OneSystem IT-Servicios",
+      "date": "Mai 2022 — Sept 2022",
+      "badge": "Stagiu FCT",
+      "task1": "Administrarea stațiilor Windows/Linux și configurarea rețelelor locale.",
+      "task2": "Diagnosticarea hardware-ului și rezolvarea incidentelor de Nivel 1/2.",
+      "task3": "Implementarea și configurarea mediilor de lucru pentru utilizatorii finali."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "În prezent caut noi oportunități. Nu ezita să mă contactezi prin oricare dintre aceste canale."
+  },
+  "footer": {
+    "rights": "Toate drepturile rezervate.",
+    "built": "Făcut cu React și Tailwind CSS"
+  }
+}

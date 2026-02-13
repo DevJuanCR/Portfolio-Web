@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "stack": "Stack",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "subtitle": "Desarrollador Junior · Java · Python · JavaScript"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "p1": "Desarrollador Junior con doble titulación técnica en <highlight>Desarrollo de Aplicaciones Multiplataforma (DAM)</highlight> y <highlight>Sistemas Microinformáticos y Redes (SMR)</highlight>.",
+    "p2": "Construyo servicios backend con Java y Spring Boot, desarrollo herramientas y aplicaciones con Python, y creo frontends interactivos con JavaScript y React.",
+    "p3": "Trabajo con Docker, pipelines CI/CD y entornos Linux. Me gusta construir soluciones reales y aprender lo que haga falta por el camino."
+  },
+  "stack": {
+    "title": "Stack Técnico",
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks y Librerías",
+    "devops": "DevOps y Herramientas"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "loading": "Cargando proyectos desde GitHub...",
+    "error": "No se pudieron cargar los proyectos.",
+    "noDescription": "Sin descripción"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "job1": {
+      "role": "Desarrollador Web",
+      "company": "Infomesidess, Reus",
+      "date": "Sept 2024 — Abr 2025",
+      "badge": "Prácticas FCT",
+      "task1": "Creación de sitios web corporativos y e-commerce con WordPress y WooCommerce.",
+      "task2": "Personalización del backend con PHP y configuración de servidor (.htaccess).",
+      "task3": "Optimización de rendimiento: mejora de tiempos de carga y Core Web Vitals."
+    },
+    "job2": {
+      "role": "Técnico de Soporte IT y Sistemas",
+      "company": "OneSystem IT-Servicios",
+      "date": "May 2022 — Sept 2022",
+      "badge": "Prácticas FCT",
+      "task1": "Administración de equipos Windows/Linux y configuración de redes locales.",
+      "task2": "Diagnóstico de hardware y resolución de incidencias Nivel 1/2.",
+      "task3": "Despliegue y configuración de entornos de trabajo para usuarios finales."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Actualmente busco nuevas oportunidades. No dudes en contactarme por cualquiera de estos canales."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Hecho con React y Tailwind CSS"
+  }
+}

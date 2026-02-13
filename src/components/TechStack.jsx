@@ -19,11 +19,13 @@ import {
   SiGithubactions,
   SiIntellijidea,
 } from 'react-icons/si'
+import { useTranslation } from 'react-i18next'
 
 // separamos las tecnologias por categoria
+// titleKey apunta a la clave de traduccion de cada categoria
 const categories = [
   {
-    title: 'Languages',
+    titleKey: 'stack.languages',
     techs: [
       { name: 'Java', icon: <FaJava /> },
       { name: 'Python', icon: <FaPython /> },
@@ -34,7 +36,7 @@ const categories = [
     ],
   },
   {
-    title: 'Frameworks & Libraries',
+    titleKey: 'stack.frameworks',
     techs: [
       { name: 'Spring Boot', icon: <SiSpringboot /> },
       { name: 'React', icon: <SiReact /> },
@@ -43,7 +45,7 @@ const categories = [
     ],
   },
   {
-    title: 'DevOps & Tools',
+    titleKey: 'stack.devops',
     techs: [
       { name: 'Docker', icon: <FaDocker /> },
       { name: 'Git', icon: <FaGitAlt /> },
@@ -57,19 +59,21 @@ const categories = [
 ]
 
 function TechStack() {
+  const { t } = useTranslation()
+
   return (
     <section id="stack" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
 
         <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
-          Tech Stack
+          {t('stack.title')}
         </h2>
 
         <div className="space-y-10">
           {categories.map((cat) => (
-            <div key={cat.title}>
+            <div key={cat.titleKey}>
               <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4">
-                {cat.title}
+                {t(cat.titleKey)}
               </h3>
               {/* grid responsive: 3 columnas en movil, 6 en desktop */}
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">

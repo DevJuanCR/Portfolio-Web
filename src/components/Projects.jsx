@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FaStar, FaCodeBranch, FaExternalLinkAlt } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 const GITHUB_USER = 'DevJuanCR'
 
@@ -18,6 +19,7 @@ function Projects() {
   const [repos, setRepos] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const { t } = useTranslation()
 
   useEffect(() => {
     fetchRepos()
@@ -68,8 +70,8 @@ function Projects() {
     return (
       <section id="projects" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">Projects</h2>
-          <p className="text-slate-500 dark:text-slate-400">Loading projects from GitHub...</p>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">{t('projects.title')}</h2>
+          <p className="text-slate-500 dark:text-slate-400">{t('projects.loading')}</p>
         </div>
       </section>
     )
@@ -79,8 +81,8 @@ function Projects() {
     return (
       <section id="projects" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">Projects</h2>
-          <p className="text-red-500 dark:text-red-400">Could not load projects right now</p>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">{t('projects.title')}</h2>
+          <p className="text-red-500 dark:text-red-400">{t('projects.error')}</p>
         </div>
       </section>
     )
@@ -90,7 +92,7 @@ function Projects() {
     <section id="projects" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
-          Projects
+          {t('projects.title')}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -116,7 +118,7 @@ function Projects() {
                 </div>
 
                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                  {repo.description || 'No description'}
+                  {repo.description || t('projects.noDescription')}
                 </p>
 
                 {/* estrellas y forks del repo */}

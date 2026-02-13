@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 // links de contacto que aparecen como cards
 const contactLinks = [
@@ -23,17 +24,18 @@ const contactLinks = [
 ]
 
 function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section id="contact" className="py-20 px-4">
       <div className="max-w-2xl mx-auto text-center">
 
         <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-          Get In Touch
+          {t('contact.title')}
         </h2>
 
         <p className="text-slate-500 dark:text-slate-400 mb-10">
-          I'm currently looking for new opportunities. Feel free to reach out
-          through any of these channels.
+          {t('contact.subtitle')}
         </p>
 
         <div className="flex flex-col gap-4">

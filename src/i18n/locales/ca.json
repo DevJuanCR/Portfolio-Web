@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "Sobre mi",
+    "stack": "Stack",
+    "projects": "Projectes",
+    "experience": "Experiència",
+    "contact": "Contacte"
+  },
+  "hero": {
+    "greeting": "Hola, soc",
+    "subtitle": "Desenvolupador Junior · Java · Python · JavaScript"
+  },
+  "about": {
+    "title": "Sobre mi",
+    "p1": "Desenvolupador Junior amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMR)</highlight>.",
+    "p2": "Construeixo serveis backend amb Java i Spring Boot, desenvolupo eines i aplicacions amb Python, i creo frontends interactius amb JavaScript i React.",
+    "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí."
+  },
+  "stack": {
+    "title": "Stack Tècnic",
+    "languages": "Llenguatges",
+    "frameworks": "Frameworks i Llibreries",
+    "devops": "DevOps i Eines"
+  },
+  "projects": {
+    "title": "Projectes",
+    "loading": "Carregant projectes des de GitHub...",
+    "error": "No s'han pogut carregar els projectes.",
+    "noDescription": "Sense descripció"
+  },
+  "experience": {
+    "title": "Experiència",
+    "job1": {
+      "role": "Desenvolupador Web",
+      "company": "Infomesidess, Reus",
+      "date": "Set 2024 — Abr 2025",
+      "badge": "Pràctiques FCT",
+      "task1": "Creació de llocs web corporatius i e-commerce amb WordPress i WooCommerce.",
+      "task2": "Personalització del backend amb PHP i configuració de servidor (.htaccess).",
+      "task3": "Optimització de rendiment: millora de temps de càrrega i Core Web Vitals."
+    },
+    "job2": {
+      "role": "Tècnic de Suport IT i Sistemes",
+      "company": "OneSystem IT-Servicios",
+      "date": "Mai 2022 — Set 2022",
+      "badge": "Pràctiques FCT",
+      "task1": "Administració d'equips Windows/Linux i configuració de xarxes locals.",
+      "task2": "Diagnòstic de hardware i resolució d'incidències Nivell 1/2.",
+      "task3": "Desplegament i configuració d'entorns de treball per a usuaris finals."
+    }
+  },
+  "contact": {
+    "title": "Contacte",
+    "subtitle": "Actualment busco noves oportunitats. No dubtis en contactar-me per qualsevol d'aquests canals."
+  },
+  "footer": {
+    "rights": "Tots els drets reservats.",
+    "built": "Fet amb React i Tailwind CSS"
+  }
+}

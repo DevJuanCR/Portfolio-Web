@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "subtitle": "Junior Developer · Java · Python · JavaScript"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Junior Developer with a double technical degree in <highlight>Application Development (DAM)</highlight> and <highlight>IT Systems & Networking (SMR)</highlight>.",
+    "p2": "I build backend services with Java and Spring Boot, develop tools and applications with Python, and create interactive frontends with JavaScript and React.",
+    "p3": "I enjoy working with Docker, CI/CD pipelines, and Linux environments. I like building real-world solutions and learning whatever is needed along the way."
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "languages": "Languages",
+    "frameworks": "Frameworks & Libraries",
+    "devops": "DevOps & Tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "loading": "Loading projects from GitHub...",
+    "error": "Could not load projects right now.",
+    "noDescription": "No description"
+  },
+  "experience": {
+    "title": "Experience",
+    "job1": {
+      "role": "Web Developer",
+      "company": "Infomesidess, Reus",
+      "date": "Sept 2024 — Apr 2025",
+      "badge": "FCT Internship",
+      "task1": "Built corporate websites and e-commerce stores with WordPress and WooCommerce.",
+      "task2": "Backend customization with PHP and server configuration (.htaccess).",
+      "task3": "Performance optimization: improved load times and Core Web Vitals."
+    },
+    "job2": {
+      "role": "IT Support & Systems Technician",
+      "company": "OneSystem IT-Servicios",
+      "date": "May 2022 — Sept 2022",
+      "badge": "FCT Internship",
+      "task1": "Windows/Linux workstation administration and local network setup.",
+      "task2": "Hardware diagnostics and Level 1/2 incident resolution.",
+      "task3": "Deployment and configuration of end-user work environments."
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm currently looking for new opportunities. Feel free to reach out through any of these channels."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with React & Tailwind CSS"
+  }
+}
