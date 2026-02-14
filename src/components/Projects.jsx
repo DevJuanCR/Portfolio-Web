@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaStar, FaCodeBranch, FaExternalLinkAlt } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import ScrollReveal from './ScrollReveal'
 
 const GITHUB_USER = 'DevJuanCR'
 
@@ -91,79 +92,82 @@ function Projects() {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
-          {t('projects.title')}
-        </h2>
+
+        <ScrollReveal>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
+            {t('projects.title')}
+          </h2>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {repos.map((repo) => {
+          {repos.map((repo, index) => {
             const langs = getLangPercentages(repo.languages)
             return (
-              <div
-                key={repo.id}
-                className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    {repo.name}
-                  </h3>
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
-                </div>
-
-                <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                  {repo.description || t('projects.noDescription')}
-                </p>
-
-                {/* estrellas y forks del repo */}
-                <div className="flex items-center gap-4 text-sm text-slate-400 dark:text-slate-500 mb-4">
-                  <span className="flex items-center gap-1">
-                    <FaStar /> {repo.stargazers_count}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <FaCodeBranch /> {repo.forks_count}
-                  </span>
-                </div>
-
-                {/* barra de lenguajes estilo github */}
-                {langs.length > 0 && (
-                  <div>
-                    <div className="flex h-2 rounded-full overflow-hidden mb-2">
-                      {langs.map((lang) => (
-                        <div
-                          key={lang.name}
-                          style={{
-                            width: `${lang.percentage}%`,
-                            backgroundColor: lang.color,
-                          }}
-                          title={`${lang.name} ${lang.percentage}%`}
-                        />
-                      ))}
-                    </div>
-                    {/* leyenda con los colores de cada lenguaje */}
-                    <div className="flex flex-wrap gap-3">
-                      {langs.map((lang) => (
-                        <span
-                          key={lang.name}
-                          className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400"
-                        >
-                          <span
-                            className="w-2 h-2 rounded-full"
-                            style={{ backgroundColor: lang.color }}
-                          />
-                          {lang.name} {lang.percentage}%
-                        </span>
-                      ))}
-                    </div>
+              // cada card entra con un delay progresivo
+              <ScrollReveal key={repo.id} delay={index * 0.1}>
+                <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors h-full">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+                      {repo.name}
+                    </h3>
+                    <a
+                      href={repo.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
                   </div>
-                )}
-              </div>
+
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                    {repo.description || t('projects.noDescription')}
+                  </p>
+
+                  {/* estrellas y forks del repo */}
+                  <div className="flex items-center gap-4 text-sm text-slate-400 dark:text-slate-500 mb-4">
+                    <span className="flex items-center gap-1">
+                      <FaStar /> {repo.stargazers_count}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <FaCodeBranch /> {repo.forks_count}
+                    </span>
+                  </div>
+
+                  {/* barra de lenguajes estilo github */}
+                  {langs.length > 0 && (
+                    <div>
+                      <div className="flex h-2 rounded-full overflow-hidden mb-2">
+                        {langs.map((lang) => (
+                          <div
+                            key={lang.name}
+                            style={{
+                              width: `${lang.percentage}%`,
+                              backgroundColor: lang.color,
+                            }}
+                            title={`${lang.name} ${lang.percentage}%`}
+                          />
+                        ))}
+                      </div>
+                      {/* leyenda con los colores de cada lenguaje */}
+                      <div className="flex flex-wrap gap-3">
+                        {langs.map((lang) => (
+                          <span
+                            key={lang.name}
+                            className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400"
+                          >
+                            <span
+                              className="w-2 h-2 rounded-full"
+                              style={{ backgroundColor: lang.color }}
+                            />
+                            {lang.name} {lang.percentage}%
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </ScrollReveal>
             )
           })}
         </div>

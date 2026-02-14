@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 // los links de redes que aparecen debajo del nombre
 const socialLinks = [
@@ -15,19 +16,40 @@ function Hero() {
     <section id="hero" className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-2xl">
 
-        <p className="text-blue-600 dark:text-blue-400 text-lg mb-2 font-medium">
+        {/* cada elemento entra con un delay diferente para efecto cascada */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-blue-600 dark:text-blue-400 text-lg mb-2 font-medium"
+        >
           {t('hero.greeting')}
-        </p>
+        </motion.p>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-4"
+        >
           Juan Carlos
-        </h1>
+        </motion.h1>
 
-        <h2 className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8"
+        >
           {t('hero.subtitle')}
-        </h2>
+        </motion.h2>
 
-        <div className="flex justify-center gap-5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="flex justify-center gap-5"
+        >
           {socialLinks.map((link) => (
             <a
               key={link.label}
@@ -40,7 +62,7 @@ function Hero() {
               {link.icon}
             </a>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
