@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { FaStar, FaCodeBranch, FaExternalLinkAlt } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import ScrollReveal from './ScrollReveal'
+import ProjectSkeleton from './ProjectSkeleton'
 
 const GITHUB_USER = 'DevJuanCR'
 
@@ -78,9 +79,15 @@ function Projects() {
   if (loading) {
     return (
       <section id="projects" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12">{t('projects.title')}</h2>
-          <p className="text-slate-500 dark:text-slate-400">{t('projects.loading')}</p>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
+            {t('projects.title')}
+          </h2>
+          {/* mostramos 2 skeletons mientras carga */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <ProjectSkeleton />
+            <ProjectSkeleton />
+          </div>
         </div>
       </section>
     )
