@@ -7,6 +7,7 @@ import Experience from './components/Experience'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import BackToTop from './components/BackToTop'
 import useTheme from './hooks/useTheme'
 import useActiveSection from './hooks/useActiveSection'
 
@@ -26,6 +27,7 @@ function App() {
       <Education />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   )
 }
