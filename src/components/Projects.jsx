@@ -67,6 +67,14 @@ function Projects() {
     }))
   }
 
+  // sacamos la descripcion traducida si existe, si no usamos la de github
+  function getDescription(repo) {
+    const translatedKey = `projects.descriptions.${repo.name}`
+    const translated = t(translatedKey, { defaultValue: '' })
+    if (translated && translated !== translatedKey) return translated
+    return repo.description || t('projects.noDescription')
+  }
+
   if (loading) {
     return (
       <section id="projects" className="py-20 px-4">
@@ -103,7 +111,6 @@ function Projects() {
           {repos.map((repo, index) => {
             const langs = getLangPercentages(repo.languages)
             return (
-              // cada card entra con un delay progresivo
               <ScrollReveal key={repo.id} delay={index * 0.1}>
                 <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors h-full">
                   <div className="flex items-start justify-between mb-3">
@@ -121,7 +128,7 @@ function Projects() {
                   </div>
 
                   <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                    {repo.description || t('projects.noDescription')}
+                    {getDescription(repo)}
                   </p>
 
                   {/* estrellas y forks del repo */}

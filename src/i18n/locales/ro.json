@@ -27,7 +27,11 @@
     "title": "Proiecte",
     "loading": "Se încarcă proiectele de pe GitHub...",
     "error": "Nu s-au putut încărca proiectele.",
-    "noDescription": "Fără descriere"
+    "noDescription": "Fără descriere",
+    "descriptions": {
+      "SysAdmin-Monitor": "Sistem de monitorizare în timp real. Backend în Java cu Spring Boot, agent în Python, frontend cu Chart.js și implementare cu Docker Compose.",
+      "Scraper-InfoJobs-Python": "Bot de automatizare pentru extragerea ofertelor de muncă de pe InfoJobs. Folosește Selenium cu detectarea captcha-urilor și export în CSV."
+    }
   },
   "experience": {
     "title": "Experiență",

@@ -27,7 +27,11 @@
     "title": "Proyectos",
     "loading": "Cargando proyectos desde GitHub...",
     "error": "No se pudieron cargar los proyectos.",
-    "noDescription": "Sin descripción"
+    "noDescription": "Sin descripción",
+    "descriptions": {
+      "SysAdmin-Monitor": "Sistema de monitorización en tiempo real. Backend en Java con Spring Boot, agente en Python, frontend con Chart.js y despliegue con Docker Compose.",
+      "Scraper-InfoJobs-Python": "Bot de automatización para extracción de ofertas de empleo en InfoJobs. Usa Selenium con detección de captchas y exportación a CSV."
+    }
   },
   "experience": {
     "title": "Experiencia",

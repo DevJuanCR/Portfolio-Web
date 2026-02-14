@@ -27,7 +27,11 @@
     "title": "Projects",
     "loading": "Loading projects from GitHub...",
     "error": "Could not load projects right now.",
-    "noDescription": "No description"
+    "noDescription": "No description",
+    "descriptions": {
+      "SysAdmin-Monitor": "Real-time monitoring system. Java backend with Spring Boot, Python agent, Chart.js frontend and Docker Compose deployment.",
+      "Scraper-InfoJobs-Python": "Automation bot for extracting job listings from InfoJobs. Uses Selenium with captcha detection and CSV export."
+    }
   },
   "experience": {
     "title": "Experience",

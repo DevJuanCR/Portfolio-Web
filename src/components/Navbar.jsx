@@ -3,12 +3,12 @@ import { FaSun, FaMoon } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 
 const navLinks = [
-  { key: 'nav.about', href: '#about' },
-  { key: 'nav.stack', href: '#stack' },
-  { key: 'nav.projects', href: '#projects' },
-  { key: 'nav.experience', href: '#experience' },
-  { key: 'nav.education', href: '#education' },
-  { key: 'nav.contact', href: '#contact' },
+  { key: 'nav.about', href: '#about', section: 'about' },
+  { key: 'nav.stack', href: '#stack', section: 'stack' },
+  { key: 'nav.projects', href: '#projects', section: 'projects' },
+  { key: 'nav.experience', href: '#experience', section: 'experience' },
+  { key: 'nav.education', href: '#education', section: 'education' },
+  { key: 'nav.contact', href: '#contact', section: 'contact' },
 ]
 
 // flag-icons usa codigos ISO, Cataluna es es-ct
@@ -19,10 +19,10 @@ const languages = [
   { code: 'ro', label: 'RO', flagClass: 'fi fi-ro' },
 ]
 
-function Navbar({ darkMode, toggleTheme }) {
+function Navbar({ darkMode, toggleTheme, activeSection }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false) // para saber si el usuario ha hecho scroll
+  const [scrolled, setScrolled] = useState(false)
   const { t, i18n } = useTranslation()
 
   // detectamos cuando el usuario hace scroll para cambiar el estilo del navbar
@@ -55,12 +55,12 @@ function Navbar({ darkMode, toggleTheme }) {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled
         ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700/50 shadow-sm'
-        : 'bg-transparent' // transparente arriba del todo
+        : 'bg-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
         <a href="#hero" className="text-xl font-bold text-blue-600 dark:text-blue-500">
-          &lt;DevJuanCR /&gt;
+          &lt;DevJuanCR/&gt;
         </a>
 
         {/* links en desktop */}
@@ -69,7 +69,11 @@ function Navbar({ darkMode, toggleTheme }) {
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
+              className={`text-sm transition-colors ${
+                activeSection === link.section
+                  ? 'text-blue-600 dark:text-blue-400 font-medium' // link activo resaltado
+                  : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400'
+              }`}
             >
               {t(link.key)}
             </a>
@@ -171,7 +175,11 @@ function Navbar({ darkMode, toggleTheme }) {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="block py-2 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className={`block py-2 transition-colors ${
+                  activeSection === link.section
+                    ? 'text-blue-600 dark:text-blue-400 font-medium'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
                 onClick={() => setMenuOpen(false)} // cerramos el menu al hacer click
               >
                 {t(link.key)}
