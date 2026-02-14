@@ -4,6 +4,7 @@
     "stack": "Stack",
     "projects": "Projects",
     "experience": "Experience",
+    "education": "Education",
     "contact": "Contact"
   },
   "hero": {
@@ -47,6 +48,21 @@
       "task1": "Windows/Linux workstation administration and local network setup.",
       "task2": "Hardware diagnostics and Level 1/2 incident resolution.",
       "task3": "Deployment and configuration of end-user work environments."
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degree1": {
+      "name": "Higher Vocational Training in Multiplatform Application Development",
+      "school": "IES Jaume Huguet, Tarragona",
+      "date": "Sept 2023 — Dec 2025",
+      "badge": "Higher Degree"
+    },
+    "degree2": {
+      "name": "Intermediate Vocational Training in IT Systems & Networking",
+      "school": "IES Baix Camp, Reus",
+      "date": "Sept 2020 — Jun 2023",
+      "badge": "Intermediate Degree"
     }
   },
   "contact": {

@@ -4,6 +4,7 @@
     "stack": "Stack",
     "projects": "Proiecte",
     "experience": "Experiență",
+    "education": "Educație",
     "contact": "Contact"
   },
   "hero": {
@@ -47,6 +48,21 @@
       "task1": "Administrarea stațiilor Windows/Linux și configurarea rețelelor locale.",
       "task2": "Diagnosticarea hardware-ului și rezolvarea incidentelor de Nivel 1/2.",
       "task3": "Implementarea și configurarea mediilor de lucru pentru utilizatorii finali."
+    }
+  },
+  "education": {
+    "title": "Educație",
+    "degree1": {
+      "name": "Studii Superioare în Dezvoltarea Aplicațiilor Multiplatformă",
+      "school": "IES Jaume Huguet, Tarragona",
+      "date": "Sept 2023 — Dec 2025",
+      "badge": "Grad Superior"
+    },
+    "degree2": {
+      "name": "Studii Medii în Sisteme Microinformatice și Rețele",
+      "school": "IES Baix Camp, Reus",
+      "date": "Sept 2020 — Iun 2023",
+      "badge": "Grad Mediu"
     }
   },
   "contact": {

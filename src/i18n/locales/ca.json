@@ -4,6 +4,7 @@
     "stack": "Stack",
     "projects": "Projectes",
     "experience": "Experiència",
+    "education": "Educació",
     "contact": "Contacte"
   },
   "hero": {
@@ -47,6 +48,21 @@
       "task1": "Administració d'equips Windows/Linux i configuració de xarxes locals.",
       "task2": "Diagnòstic de hardware i resolució d'incidències Nivell 1/2.",
       "task3": "Desplegament i configuració d'entorns de treball per a usuaris finals."
+    }
+  },
+  "education": {
+    "title": "Educació",
+    "degree1": {
+      "name": "Grau Superior en Desenvolupament d'Aplicacions Multiplataforma (DAM)",
+      "school": "IES Jaume Huguet, Tarragona",
+      "date": "Set 2023 — Des 2025",
+      "badge": "CFGS"
+    },
+    "degree2": {
+      "name": "Grau Mitjà en Sistemes Microinformàtics i Xarxes (SMX)",
+      "school": "IES Baix Camp, Reus",
+      "date": "Set 2020 — Jun 2023",
+      "badge": "CFGM"
     }
   },
   "contact": {

@@ -7,6 +7,7 @@ const navLinks = [
   { key: 'nav.stack', href: '#stack' },
   { key: 'nav.projects', href: '#projects' },
   { key: 'nav.experience', href: '#experience' },
+  { key: 'nav.education', href: '#education' },
   { key: 'nav.contact', href: '#contact' },
 ]
 
