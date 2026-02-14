@@ -1,2 +1,32 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* scroll suave al hacer click en los links del navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* para que las secciones no queden debajo del navbar fijo */
+}
+
+/* scrollbar personalizado para que no desentone en dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* color de seleccion de texto */
+::selection {
+  background-color: #2563eb;
+  color: white;
+}

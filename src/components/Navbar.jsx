@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaSun, FaMoon } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 
@@ -10,7 +10,7 @@ const navLinks = [
   { key: 'nav.contact', href: '#contact' },
 ]
 
-// usamos flag-icons para poner las banderas
+// flag-icons usa codigos ISO, Cataluna es es-ct
 const languages = [
   { code: 'es', label: 'ES', flagClass: 'fi fi-es' },
   { code: 'en', label: 'EN', flagClass: 'fi fi-us' },
@@ -21,7 +21,24 @@ const languages = [
 function Navbar({ darkMode, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false) // para saber si el usuario ha hecho scroll
   const { t, i18n } = useTranslation()
+
+  // detectamos cuando el usuario hace scroll para cambiar el estilo del navbar
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // cerramos el menu movil si la pantalla se hace grande
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setMenuOpen(false)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   // cambiamos idioma y lo guardamos en localStorage
   const changeLanguage = (code) => {
@@ -34,11 +51,14 @@ function Navbar({ darkMode, toggleTheme }) {
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0]
 
   return (
-    // backdrop-blur para el efecto cristal al hacer scroll
-    <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700/50 transition-colors">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      scrolled
+        ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700/50 shadow-sm'
+        : 'bg-transparent' // transparente arriba del todo
+    }`}>
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
-        <a href="#" className="text-xl font-bold text-blue-600 dark:text-blue-500">
+        <a href="#hero" className="text-xl font-bold text-blue-600 dark:text-blue-500">
           &lt;DevJuanCR /&gt;
         </a>
 
