@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "Despre mine",
-    "p1": "Dezvoltator Junior cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă (DAM)</highlight> și <highlight>Sisteme Microinformatice și Rețele (SMR)</highlight>.",
+    "p1": "Dezvoltator Junior cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă</highlight> și <highlight>Sisteme Microinformatice și Rețele</highlight>.",
     "p2": "Construiesc servicii backend cu Java și Spring Boot, dezvolt instrumente și aplicații cu Python și creez frontend-uri interactive cu JavaScript și React.",
     "p3": "Lucrez cu Docker, pipeline-uri CI/CD și medii Linux. Îmi place să construiesc soluții reale și să învăț ce e nevoie pe parcurs."
   },

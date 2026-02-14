@@ -12,7 +12,7 @@
   },
   "about": {
     "title": "Sobre mi",
-    "p1": "Desenvolupador Junior amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMR)</highlight>.",
+    "p1": "Desenvolupador Junior amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMX)</highlight>.",
     "p2": "Construeixo serveis backend amb Java i Spring Boot, desenvolupo eines i aplicacions amb Python, i creo frontends interactius amb JavaScript i React.",
     "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí."
   },
