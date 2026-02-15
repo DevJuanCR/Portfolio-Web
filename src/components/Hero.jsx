@@ -1,6 +1,7 @@
+import { useRef } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import TypingText from './TypingText'
 
 // los links de redes que aparecen debajo del nombre
@@ -12,10 +13,29 @@ const socialLinks = [
 
 function Hero() {
   const { t } = useTranslation()
+  const ref = useRef(null)
+
+  // trackeamos el scroll dentro del hero
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'], // desde que aparece hasta que sale
+  })
+
+  // el contenido sube lentamente y se desvanece al hacer scroll
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150])
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-16">
-      <div className="text-center max-w-2xl">
+    <section id="hero" ref={ref} className="min-h-screen flex items-center justify-center px-4 pt-16 relative overflow-hidden">
+
+      {/* particulas decorativas de fondo */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-blue-600/5 dark:bg-blue-600/10 rounded-full blur-3xl" />
+      </div>
+
+      {/* el contenido se mueve con parallax */}
+      <motion.div style={{ y, opacity }} className="text-center max-w-2xl relative z-10">
 
         {/* cada elemento entra con un delay diferente para efecto cascada */}
         <motion.p
@@ -66,7 +86,7 @@ function Hero() {
           ))}
         </motion.div>
 
-      </div>
+      </motion.div>
     </section>
   )
 }
