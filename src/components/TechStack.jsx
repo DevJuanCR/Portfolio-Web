@@ -21,39 +21,40 @@ import {
 } from 'react-icons/si'
 import { useTranslation } from 'react-i18next'
 import ScrollReveal from './ScrollReveal'
+import Tooltip from './Tooltip'
 
-// separamos las tecnologias por categoria
+// separamos las tecnologias por categoria con tooltip de contexto
 const categories = [
   {
     titleKey: 'stack.languages',
     techs: [
-      { name: 'Java', icon: <FaJava /> },
-      { name: 'Python', icon: <FaPython /> },
-      { name: 'JavaScript', icon: <FaJsSquare /> },
-      { name: 'PHP', icon: <FaPhp /> },
-      { name: 'HTML', icon: <FaHtml5 /> },
-      { name: 'CSS', icon: <FaCss3Alt /> },
+      { name: 'Java', icon: <FaJava />, tip: 'SysAdmin Monitor' },
+      { name: 'Python', icon: <FaPython />, tip: 'SysAdmin Monitor · InfoJobs Scraper' },
+      { name: 'JavaScript', icon: <FaJsSquare />, tip: 'SysAdmin Monitor · Portfolio' },
+      { name: 'PHP', icon: <FaPhp />, tip: 'Infomesidess FCT' },
+      { name: 'HTML', icon: <FaHtml5 />, tip: 'SysAdmin Monitor · Portfolio' },
+      { name: 'CSS', icon: <FaCss3Alt />, tip: 'SysAdmin Monitor · Portfolio' },
     ],
   },
   {
     titleKey: 'stack.frameworks',
     techs: [
-      { name: 'Spring Boot', icon: <SiSpringboot /> },
-      { name: 'React', icon: <SiReact /> },
-      { name: 'Tailwind', icon: <SiTailwindcss /> },
-      { name: 'Selenium', icon: <SiSelenium /> },
+      { name: 'Spring Boot', icon: <SiSpringboot />, tip: 'SysAdmin Monitor' },
+      { name: 'React', icon: <SiReact />, tip: 'Portfolio' },
+      { name: 'Tailwind', icon: <SiTailwindcss />, tip: 'Portfolio' },
+      { name: 'Selenium', icon: <SiSelenium />, tip: 'InfoJobs Scraper' },
     ],
   },
   {
     titleKey: 'stack.devops',
     techs: [
-      { name: 'Docker', icon: <FaDocker /> },
-      { name: 'Git', icon: <FaGitAlt /> },
-      { name: 'GitHub', icon: <FaGithub /> },
-      { name: 'GitHub Actions', icon: <SiGithubactions /> },
-      { name: 'PostgreSQL', icon: <SiPostgresql /> },
-      { name: 'IntelliJ IDEA', icon: <SiIntellijidea /> },
-      { name: 'Linux', icon: <FaLinux /> },
+      { name: 'Docker', icon: <FaDocker />, tip: 'SysAdmin Monitor' },
+      { name: 'Git', icon: <FaGitAlt />, tip: 'All projects' },
+      { name: 'GitHub', icon: <FaGithub />, tip: 'All projects' },
+      { name: 'GitHub Actions', icon: <SiGithubactions />, tip: 'SysAdmin Monitor' },
+      { name: 'PostgreSQL', icon: <SiPostgresql />, tip: 'SysAdmin Monitor' },
+      { name: 'IntelliJ IDEA', icon: <SiIntellijidea />, tip: 'SysAdmin Monitor' },
+      { name: 'Linux', icon: <FaLinux />, tip: 'OneSystem FCT' },
     ],
   },
 ]
@@ -81,13 +82,12 @@ function TechStack() {
                 {/* grid responsive: 3 columnas en movil, 6 en desktop */}
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
                   {cat.techs.map((tech) => (
-                    <div
-                      key={tech.name}
-                      className="flex flex-col items-center gap-2 p-3 rounded-lg bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-blue-500/50 hover:scale-105 transition-all duration-200"
-                    >
-                      <span className="text-2xl text-slate-700 dark:text-slate-300">{tech.icon}</span>
-                      <span className="text-xs text-slate-500 dark:text-slate-400">{tech.name}</span>
-                    </div>
+                    <Tooltip key={tech.name} text={tech.tip}>
+                      <div className="flex flex-col items-center gap-2 p-3 rounded-lg bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-blue-500/50 hover:scale-105 transition-all duration-200 cursor-default">
+                        <span className="text-2xl text-slate-700 dark:text-slate-300">{tech.icon}</span>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">{tech.name}</span>
+                      </div>
+                    </Tooltip>
                   ))}
                 </div>
               </div>
