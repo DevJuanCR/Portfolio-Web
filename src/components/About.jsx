@@ -1,5 +1,6 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ScrollReveal from './ScrollReveal'
+import avatar from '../assets/avatar.png'
 
 // componente reutilizable para el texto resaltado en azul
 const Highlight = ({ children }) => (
@@ -21,11 +22,14 @@ function About() {
 
         <div className="flex flex-col md:flex-row items-center gap-10">
 
-          {/* placeholder del avatar - lo cambiaremos por la imagen real */}
+          {/* avatar */}
           <ScrollReveal delay={0.1} direction="left">
-            <div className="w-48 h-48 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-blue-500/30 flex items-center justify-center shrink-0">
-              <span className="text-6xl">👨‍💻</span>
-            </div>
+            <img
+              src={avatar}
+              alt="Juan Carlos"
+              // mover el enfoque a la izquierda y ajustar vertical
+              className="w-65 h-65 rounded-full border-3 border-blue-500/30 object-cover object-[65%_30%] shrink-0"
+            />
           </ScrollReveal>
 
           {/* en movil centramos el texto y en desktop lo alineamos a la izquierda */}

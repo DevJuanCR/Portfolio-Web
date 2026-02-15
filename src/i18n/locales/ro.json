@@ -79,6 +79,10 @@
     "title": "Contact",
     "subtitle": "În prezent caut noi oportunități. Nu ezita să mă contactezi prin oricare dintre aceste canale."
   },
+    "notFound": {
+    "message": "Pagina pe care o cauți nu există sau a fost mutată.",
+    "button": "Înapoi la pagina principală"
+  },
   "footer": {
     "rights": "Toate drepturile rezervate.",
     "built": "Făcut cu React și Tailwind CSS"

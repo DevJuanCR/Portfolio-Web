@@ -79,6 +79,10 @@
     "title": "Contacte",
     "subtitle": "Actualment busco noves oportunitats. No dubtis en contactar-me per qualsevol d'aquests canals."
   },
+    "notFound": {
+    "message": "La pàgina que busques no existeix o ha estat moguda.",
+    "button": "Tornar a l'inici"
+  },
   "footer": {
     "rights": "Tots els drets reservats.",
     "built": "Fet amb React i Tailwind CSS"

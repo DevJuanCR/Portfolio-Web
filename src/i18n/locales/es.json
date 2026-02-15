@@ -79,6 +79,10 @@
     "title": "Contacto",
     "subtitle": "Actualmente busco nuevas oportunidades. No dudes en contactarme por cualquiera de estos canales."
   },
+    "notFound": {
+    "message": "La página que buscas no existe o ha sido movida.",
+    "button": "Volver al inicio"
+  },
   "footer": {
     "rights": "Todos los derechos reservados.",
     "built": "Hecho con React y Tailwind CSS"

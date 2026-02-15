@@ -79,6 +79,10 @@
     "title": "Get In Touch",
     "subtitle": "I'm currently looking for new opportunities. Feel free to reach out through any of these channels."
   },
+    "notFound": {
+    "message": "The page you're looking for doesn't exist or has been moved.",
+    "button": "Go back home"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "built": "Built with React & Tailwind CSS"
