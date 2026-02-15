@@ -119,16 +119,18 @@ function Projects() {
             const langs = getLangPercentages(repo.languages)
             return (
               <ScrollReveal key={repo.id} delay={index * 0.1}>
-                <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors h-full">
+                {/* hover: se levanta, crece un poco y aparece sombra azul */}
+                <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 h-full transition-all duration-300 hover:border-blue-500/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                       {repo.name}
                     </h3>
+                    {/* el icono rota un poco al hacer hover en la card */}
                     <a
                       href={repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:rotate-12"
                     >
                       <FaExternalLinkAlt />
                     </a>

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import TypingText from './TypingText'
@@ -85,6 +85,24 @@ function Hero() {
         </motion.div>
 
       </motion.div>
+
+      {/* flecha bounce abajo del hero */}
+      <motion.a
+        href="#about"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          className="text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl"
+        >
+          <FaChevronDown />
+        </motion.div>
+      </motion.a>
+
     </section>
   )
 }

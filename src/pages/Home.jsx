@@ -12,6 +12,7 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import Preloader from '../components/Preloader'
+import DotGrid from '../components/DotGrid'
 import useTheme from '../hooks/useTheme'
 import useActiveSection from '../hooks/useActiveSection'
 
@@ -28,17 +29,20 @@ function Home() {
 
       {!loading && (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
-          <Navbar darkMode={darkMode} toggleTheme={toggleTheme} activeSection={activeSection} />
-          <Hero />
-          <About />
-          <Stats />
-          <TechStack />
-          <Projects />
-          <Experience />
-          <Education />
-          <Contact />
-          <Footer />
-          <BackToTop />
+          <DotGrid /> {/* grid de puntos detras de todo el contenido */}
+          <div className="relative z-10"> {/* el contenido por encima del grid */}
+            <Navbar darkMode={darkMode} toggleTheme={toggleTheme} activeSection={activeSection} />
+            <Hero />
+            <About />
+            <Stats />
+            <TechStack />
+            <Projects />
+            <Experience />
+            <Education />
+            <Contact />
+            <Footer />
+            <BackToTop />
+          </div>
         </div>
       )}
     </>

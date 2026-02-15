@@ -34,10 +34,12 @@ function Education() {
         <div className="grid md:grid-cols-2 gap-6">
           {degrees.map((degree, index) => (
             <ScrollReveal key={index} delay={index * 0.15}>
-              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 hover:border-blue-500/50 transition-colors h-full">
+              {/* mismo efecto hover que las project cards */}
+              <div className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-6 h-full transition-all duration-300 hover:border-blue-500/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5">
 
                 <div className="flex items-center justify-between mb-3">
-                  <FaGraduationCap className="text-2xl text-blue-600 dark:text-blue-400" />
+                  {/* el icono crece un poco al hacer hover en la card */}
+                  <FaGraduationCap className="text-2xl text-blue-600 dark:text-blue-400 transition-transform duration-300 group-hover:scale-110" />
                   <span className="text-xs bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-1 rounded font-medium">
                     {degree.badge}
                   </span>
