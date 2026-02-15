@@ -18,7 +18,7 @@ function Hero() {
   // trackeamos el scroll dentro del hero
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start start', 'end start'], // desde que aparece hasta que sale
+    offset: ['start start', 'end start'],
   })
 
   // el contenido sube lentamente y se desvanece al hacer scroll
@@ -37,7 +37,6 @@ function Hero() {
       {/* el contenido se mueve con parallax */}
       <motion.div style={{ y, opacity }} className="text-center max-w-2xl relative z-10">
 
-        {/* cada elemento entra con un delay diferente para efecto cascada */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +50,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-4xl sm:text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 mb-4"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-slate-900 via-blue-800 to-blue-600 dark:from-slate-100 dark:via-blue-400 dark:to-blue-600 bg-clip-text text-transparent"
         >
           Juan Carlos
         </motion.h1>
@@ -62,14 +61,13 @@ function Hero() {
           transition={{ duration: 0.3, delay: 0.6 }}
           className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8"
         >
-          {/* el typing empieza despues de que aparezca el nombre */}
           <TypingText text={t('hero.subtitle')} delay={0.8} speed={45} />
         </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 2.5 }} // aparecen cuando el typing casi ha terminado
+          transition={{ duration: 0.5, delay: 2.5 }}
           className="flex justify-center gap-5"
         >
           {socialLinks.map((link) => (
@@ -79,7 +77,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition-colors hover:scale-110 duration-200"
-              aria-label={link.label} // accesibilidad para lectores de pantalla
+              aria-label={link.label}
             >
               {link.icon}
             </a>
