@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import TypingText from './TypingText'
 
 // los links de redes que aparecen debajo del nombre
 const socialLinks = [
@@ -36,18 +37,19 @@ function Hero() {
         </motion.h1>
 
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
           className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8"
         >
-          {t('hero.subtitle')}
+          {/* el typing empieza despues de que aparezca el nombre */}
+          <TypingText text={t('hero.subtitle')} delay={0.8} speed={45} />
         </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.5, delay: 2.5 }} // aparecen cuando el typing casi ha terminado
           className="flex justify-center gap-5"
         >
           {socialLinks.map((link) => (
