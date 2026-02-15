@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Stats from './components/Stats'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
@@ -21,6 +22,7 @@ function App() {
       <Navbar darkMode={darkMode} toggleTheme={toggleTheme} activeSection={activeSection} />
       <Hero />
       <About />
+      <Stats /> 
       <TechStack />
       <Projects />
       <Experience />

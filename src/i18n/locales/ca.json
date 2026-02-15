@@ -17,6 +17,12 @@
     "p2": "Construeixo serveis backend amb Java i Spring Boot, desenvolupo eines i aplicacions amb Python, i creo frontends interactius amb JavaScript i React.",
     "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí."
   },
+  "stats": {
+    "projects": "Projectes",
+    "technologies": "Tecnologies",
+    "languages": "Idiomes",
+    "experience": "Pràctiques"
+  },
   "stack": {
     "title": "Stack Tècnic",
     "languages": "Llenguatges",

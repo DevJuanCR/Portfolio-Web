@@ -17,6 +17,12 @@
     "p2": "I build backend services with Java and Spring Boot, develop tools and applications with Python, and create interactive frontends with JavaScript and React.",
     "p3": "I enjoy working with Docker, CI/CD pipelines, and Linux environments. I like building real-world solutions and learning whatever is needed along the way."
   },
+  "stats": {
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "languages": "Languages",
+    "experience": "Internships"
+  },
   "stack": {
     "title": "Tech Stack",
     "languages": "Languages",
