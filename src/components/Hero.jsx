@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -14,6 +14,7 @@ const socialLinks = [
 function Hero() {
   const { t } = useTranslation()
   const ref = useRef(null)
+  const [arrowHovered, setArrowHovered] = useState(false)
 
   // trackeamos el scroll dentro del hero
   const { scrollYProgress } = useScroll({
@@ -61,6 +62,7 @@ function Hero() {
           transition={{ duration: 0.3, delay: 0.6 }}
           className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8"
         >
+          {/* el typing empieza despues de que aparezca el nombre */}
           <TypingText text={t('hero.subtitle')} delay={0.8} speed={45} />
         </motion.h2>
 
@@ -77,7 +79,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition-colors hover:scale-110 duration-200"
-              aria-label={link.label}
+              aria-label={link.label} // accesibilidad para lectores de pantalla
             >
               {link.icon}
             </a>
@@ -86,17 +88,23 @@ function Hero() {
 
       </motion.div>
 
-      {/* flecha bounce abajo del hero */}
+      {/* flecha bounce que acelera al hacer hover */}
       <motion.a
         href="#about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        onMouseEnter={() => setArrowHovered(true)}
+        onMouseLeave={() => setArrowHovered(false)}
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{
+            duration: arrowHovered ? 0.4 : 1.5, // mas rapido al hacer hover
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
           className="text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-2xl"
         >
           <FaChevronDown />

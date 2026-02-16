@@ -30,13 +30,17 @@ function About() {
 
         <div className="flex flex-col md:flex-row items-center gap-10">
 
-          {/* avatar */}
+          {/* avatar con glow azul al hacer hover */}
           <ScrollReveal delay={0.1} direction="left">
-            <img
-              src={avatar}
-              alt="Juan Carlos"
-              className="w-65 h-65 rounded-full border-3 border-blue-500/30 object-cover object-[65%_30%] shrink-0"
-            />
+            <div className="relative group">
+              {/* resplandor azul detras del avatar */}
+              <div className="absolute -inset-1 bg-blue-500/0 group-hover:bg-blue-500/20 rounded-full blur-xl transition-all duration-500" />
+              <img
+                src={avatar}
+                alt="Juan Carlos"
+                className="relative w-65 h-65 rounded-full border-3 border-blue-500/30 group-hover:border-blue-500/60 object-cover object-[65%_30%] shrink-0 transition-all duration-500"
+              />
+            </div>
           </ScrollReveal>
 
           {/* en movil centramos el texto y en desktop lo alineamos a la izquierda */}
