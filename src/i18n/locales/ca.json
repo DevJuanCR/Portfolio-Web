@@ -15,7 +15,10 @@
     "title": "Sobre mi",
     "p1": "Desenvolupador Junior amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMX)</highlight>.",
     "p2": "Construeixo serveis backend amb Java i Spring Boot, desenvolupo eines i aplicacions amb Python, i creo frontends interactius amb JavaScript i React.",
-    "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí."
+    "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí.",
+    "languagesTitle": "Idiomes",
+    "native": "Natiu",
+    "levelB1": "B1"
   },
   "stats": {
     "projects": "Projectes",
@@ -43,7 +46,7 @@
     "title": "Experiència",
     "job1": {
       "role": "Desenvolupador Web",
-      "company": "Infomesidess, Reus",
+      "company": "Infomesidees",
       "date": "Set 2024 — Abr 2025",
       "badge": "Pràctiques FCT",
       "task1": "Creació de llocs web corporatius i e-commerce amb WordPress i WooCommerce.",
@@ -52,7 +55,7 @@
     },
     "job2": {
       "role": "Tècnic de Suport IT i Sistemes",
-      "company": "OneSystem IT-Servicios",
+      "company": "One System IT Services",
       "date": "Mai 2022 — Set 2022",
       "badge": "Pràctiques FCT",
       "task1": "Administració d'equips Windows/Linux i configuració de xarxes locals.",
@@ -75,13 +78,13 @@
       "badge": "CFGM"
     }
   },
+  "notFound": {
+    "message": "La pàgina que busques no existeix o ha estat moguda.",
+    "button": "Tornar a l'inici"
+  },
   "contact": {
     "title": "Contacte",
     "subtitle": "Actualment busco noves oportunitats. No dubtis en contactar-me per qualsevol d'aquests canals."
-  },
-    "notFound": {
-    "message": "La pàgina que busques no existeix o ha estat moguda.",
-    "button": "Tornar a l'inici"
   },
   "footer": {
     "rights": "Tots els drets reservats.",

@@ -15,7 +15,10 @@
     "title": "Despre mine",
     "p1": "Dezvoltator Junior cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă</highlight> și <highlight>Sisteme Microinformatice și Rețele</highlight>.",
     "p2": "Construiesc servicii backend cu Java și Spring Boot, dezvolt instrumente și aplicații cu Python și creez frontend-uri interactive cu JavaScript și React.",
-    "p3": "Lucrez cu Docker, pipeline-uri CI/CD și medii Linux. Îmi place să construiesc soluții reale și să învăț ce e nevoie pe parcurs."
+    "p3": "Lucrez cu Docker, pipeline-uri CI/CD și medii Linux. Îmi place să construiesc soluții reale și să învăț ce e nevoie pe parcurs.",
+    "languagesTitle": "Limbi",
+    "native": "Nativ",
+    "levelB1": "B1"
   },
   "stats": {
     "projects": "Proiecte",
@@ -43,7 +46,7 @@
     "title": "Experiență",
     "job1": {
       "role": "Dezvoltator Web",
-      "company": "Infomesidess, Reus",
+      "company": "Infomesidees",
       "date": "Sept 2024 — Apr 2025",
       "badge": "Stagiu FCT",
       "task1": "Crearea de site-uri web corporative și e-commerce cu WordPress și WooCommerce.",
@@ -52,7 +55,7 @@
     },
     "job2": {
       "role": "Tehnician Suport IT și Sisteme",
-      "company": "OneSystem IT-Servicios",
+      "company": "One System IT Services",
       "date": "Mai 2022 — Sept 2022",
       "badge": "Stagiu FCT",
       "task1": "Administrarea stațiilor Windows/Linux și configurarea rețelelor locale.",
@@ -75,13 +78,13 @@
       "badge": "Grad Mediu"
     }
   },
+  "notFound": {
+    "message": "Pagina pe care o cauți nu există sau a fost mutată.",
+    "button": "Înapoi la pagina principală"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "În prezent caut noi oportunități. Nu ezita să mă contactezi prin oricare dintre aceste canale."
-  },
-    "notFound": {
-    "message": "Pagina pe care o cauți nu există sau a fost mutată.",
-    "button": "Înapoi la pagina principală"
   },
   "footer": {
     "rights": "Toate drepturile rezervate.",

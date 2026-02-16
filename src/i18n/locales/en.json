@@ -15,7 +15,10 @@
     "title": "About Me",
     "p1": "Junior Developer with a double technical degree in <highlight>Multiplatform Application Development</highlight> and <highlight>IT Systems & Networking</highlight>.",
     "p2": "I build backend services with Java and Spring Boot, develop tools and applications with Python, and create interactive frontends with JavaScript and React.",
-    "p3": "I enjoy working with Docker, CI/CD pipelines, and Linux environments. I like building real-world solutions and learning whatever is needed along the way."
+    "p3": "I enjoy working with Docker, CI/CD pipelines, and Linux environments. I like building real-world solutions and learning whatever is needed along the way.",
+    "languagesTitle": "Languages",
+    "native": "Native",
+    "levelB1": "B1"
   },
   "stats": {
     "projects": "Projects",
@@ -43,7 +46,7 @@
     "title": "Experience",
     "job1": {
       "role": "Web Developer",
-      "company": "Infomesidess, Reus",
+      "company": "Infomesidees",
       "date": "Sept 2024 — Apr 2025",
       "badge": "FCT Internship",
       "task1": "Built corporate websites and e-commerce stores with WordPress and WooCommerce.",
@@ -52,7 +55,7 @@
     },
     "job2": {
       "role": "IT Support & Systems Technician",
-      "company": "OneSystem IT-Servicios",
+      "company": "One System IT Services",
       "date": "May 2022 — Sept 2022",
       "badge": "FCT Internship",
       "task1": "Windows/Linux workstation administration and local network setup.",
@@ -75,13 +78,13 @@
       "badge": "Intermediate Degree"
     }
   },
+  "notFound": {
+    "message": "The page you're looking for doesn't exist or has been moved.",
+    "button": "Go back home"
+  },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "I'm currently looking for new opportunities. Feel free to reach out through any of these channels."
-  },
-    "notFound": {
-    "message": "The page you're looking for doesn't exist or has been moved.",
-    "button": "Go back home"
   },
   "footer": {
     "rights": "All rights reserved.",

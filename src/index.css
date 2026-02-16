@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* evitamos el scroll horizontal en movil */
+html, body {
+  overflow-x: hidden;
+}
+
 /* scroll suave al hacer click en los links del navbar */
 html {
   scroll-behavior: smooth;

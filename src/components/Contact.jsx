@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
 // links de contacto que aparecen como cards
@@ -42,25 +43,33 @@ function Contact() {
 
         <div className="flex flex-col gap-4">
           {contactLinks.map((link, index) => (
-            // cada card entra con delay progresivo
             <ScrollReveal key={link.label} delay={index * 0.1}>
               {/* group para que el hover del padre afecte a los hijos */}
-              <a
+              <motion.a
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-4 hover:border-blue-500/50 transition-colors group"
+                className="flex items-center gap-4 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 rounded-lg p-4 transition-all duration-300 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 group"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }} // efecto al hacer click en movil
               >
-                <span className="text-2xl text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {/* icono con rebote al hacer hover */}
+                <motion.span
+                  className="text-2xl text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                  whileHover={{
+                    rotate: [0, -15, 15, -10, 10, 0], // efecto de temblor
+                    transition: { duration: 0.5 },
+                  }}
+                >
                   {link.icon}
-                </span>
+                </motion.span>
                 <div className="text-left">
                   <span className="block text-sm text-slate-400 dark:text-slate-500">{link.label}</span>
                   <span className="text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {link.value}
                   </span>
                 </div>
-              </a>
+              </motion.a>
             </ScrollReveal>
           ))}
         </div>
