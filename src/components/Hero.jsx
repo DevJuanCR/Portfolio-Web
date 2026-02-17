@@ -60,11 +60,28 @@ function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.6 }}
-          className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8"
+          className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-4"
         >
           {/* el typing empieza despues de que aparezca el nombre */}
           <TypingText text={t('hero.subtitle')} delay={0.8} speed={45} />
         </motion.h2>
+
+        {/* badge de disponibilidad */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 2.2 }}
+          className="mb-8"
+        >
+          <span className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-1.5 text-sm text-green-600 dark:text-green-400">
+            {/* circulo verde pulsante */}
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            </span>
+            {t('hero.status')}
+          </span>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

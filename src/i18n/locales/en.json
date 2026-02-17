@@ -9,7 +9,8 @@
   },
   "hero": {
     "greeting": "Hey, I'm",
-    "subtitle": "Junior Developer · Java · Python · JavaScript"
+    "subtitle": "Junior Developer · Java · Python · JavaScript",
+    "status": "Open to work"
   },
   "about": {
     "title": "About Me",
