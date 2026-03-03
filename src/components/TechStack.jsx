@@ -23,38 +23,37 @@ import { useTranslation } from 'react-i18next'
 import ScrollReveal from './ScrollReveal'
 import Tooltip from './Tooltip'
 
-// separamos las tecnologias por categoria con tooltip de contexto
 const categories = [
   {
     titleKey: 'stack.languages',
     techs: [
-      { name: 'Java', icon: <FaJava />, tip: 'SysAdmin Monitor' },
-      { name: 'Python', icon: <FaPython />, tip: 'SysAdmin Monitor · InfoJobs Scraper' },
-      { name: 'JavaScript', icon: <FaJsSquare />, tip: 'SysAdmin Monitor · Portfolio' },
-      { name: 'PHP', icon: <FaPhp />, tip: 'Infomesidess FCT' },
-      { name: 'HTML', icon: <FaHtml5 />, tip: 'SysAdmin Monitor · Portfolio' },
-      { name: 'CSS', icon: <FaCss3Alt />, tip: 'SysAdmin Monitor · Portfolio' },
+      { name: 'Java', icon: <FaJava />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'Python', icon: <FaPython />, tipKey: 'stack.tips.sysadminScraper' },
+      { name: 'JavaScript', icon: <FaJsSquare />, tipKey: 'stack.tips.sysadminPortfolio' },
+      { name: 'PHP', icon: <FaPhp />, tipKey: 'stack.tips.infomesideesFCT' },
+      { name: 'HTML', icon: <FaHtml5 />, tipKey: 'stack.tips.sysadminPortfolio' },
+      { name: 'CSS', icon: <FaCss3Alt />, tipKey: 'stack.tips.sysadminPortfolio' },
     ],
   },
   {
     titleKey: 'stack.frameworks',
     techs: [
-      { name: 'Spring Boot', icon: <SiSpringboot />, tip: 'SysAdmin Monitor' },
-      { name: 'React', icon: <SiReact />, tip: 'Portfolio' },
-      { name: 'Tailwind', icon: <SiTailwindcss />, tip: 'Portfolio' },
-      { name: 'Selenium', icon: <SiSelenium />, tip: 'InfoJobs Scraper' },
+      { name: 'Spring Boot', icon: <SiSpringboot />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'React', icon: <SiReact />, tipKey: 'stack.tips.portfolio' },
+      { name: 'Tailwind', icon: <SiTailwindcss />, tipKey: 'stack.tips.portfolio' },
+      { name: 'Selenium', icon: <SiSelenium />, tipKey: 'stack.tips.scraper' },
     ],
   },
   {
     titleKey: 'stack.devops',
     techs: [
-      { name: 'Docker', icon: <FaDocker />, tip: 'SysAdmin Monitor' },
-      { name: 'Git', icon: <FaGitAlt />, tip: 'All projects' },
-      { name: 'GitHub', icon: <FaGithub />, tip: 'All projects' },
-      { name: 'GitHub Actions', icon: <SiGithubactions />, tip: 'SysAdmin Monitor' },
-      { name: 'PostgreSQL', icon: <SiPostgresql />, tip: 'SysAdmin Monitor' },
-      { name: 'IntelliJ IDEA', icon: <SiIntellijidea />, tip: 'SysAdmin Monitor' },
-      { name: 'Linux', icon: <FaLinux />, tip: 'OneSystem FCT' },
+      { name: 'Docker', icon: <FaDocker />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'Git', icon: <FaGitAlt />, tipKey: 'stack.tips.allProjects' },
+      { name: 'GitHub', icon: <FaGithub />, tipKey: 'stack.tips.allProjects' },
+      { name: 'GitHub Actions', icon: <SiGithubactions />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'PostgreSQL', icon: <SiPostgresql />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'IntelliJ IDEA', icon: <SiIntellijidea />, tipKey: 'stack.tips.sysadmin' },
+      { name: 'Linux', icon: <FaLinux />, tipKey: 'stack.tips.onesystemFCT' },
     ],
   },
 ]
@@ -79,10 +78,9 @@ function TechStack() {
                 <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4">
                   {t(cat.titleKey)}
                 </h3>
-                {/* grid responsive: 3 columnas en movil, 6 en desktop */}
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
                   {cat.techs.map((tech) => (
-                    <Tooltip key={tech.name} text={tech.tip}>
+                    <Tooltip key={tech.name} text={t(tech.tipKey)}>
                       <div className="flex flex-col items-center gap-2 p-3 rounded-lg bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50 hover:border-blue-500/50 hover:scale-105 transition-all duration-200 cursor-default">
                         <span className="text-2xl text-slate-700 dark:text-slate-300">{tech.icon}</span>
                         <span className="text-xs text-slate-500 dark:text-slate-400">{tech.name}</span>

@@ -9,14 +9,14 @@
   },
   "hero": {
     "greeting": "Salut, sunt",
-    "subtitle": "Dezvoltator Junior · Java · Python · JavaScript",
+    "subtitle": "Dezvoltator Full Stack Junior · Java · JavaScript · React · Python",
     "status": "Disponibil pentru muncă"
   },
   "about": {
     "title": "Despre mine",
-    "p1": "Dezvoltator Junior cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă</highlight> și <highlight>Sisteme Microinformatice și Rețele</highlight>.",
-    "p2": "Construiesc servicii backend cu Java și Spring Boot, dezvolt instrumente și aplicații cu Python și creez frontend-uri interactive cu JavaScript și React.",
-    "p3": "Lucrez cu Docker, pipeline-uri CI/CD și medii Linux. Îmi place să construiesc soluții reale și să învăț ce e nevoie pe parcurs.",
+    "p1": "Dezvoltator <highlight>Full Stack Junior</highlight> cu dublă calificare tehnică în <highlight>Dezvoltarea Aplicațiilor Multiplatformă (DAM)</highlight> și <highlight>Sisteme Microinformatice și Rețele (SMR)</highlight>.",
+    "p2": "Am dezvoltat și implementat proiecte complete cu <highlight>Java Spring Boot</highlight>, <highlight>React</highlight> și <highlight>Python</highlight>, cu containerizare <highlight>Docker</highlight>, CI/CD cu <highlight>GitHub Actions</highlight> și deploy pe <highlight>Vercel</highlight>.",
+    "p3": "Profil hibrid care combină dezvoltarea cu cunoștințe reale de <highlight>infrastructură, rețele și administrare de servere Linux</highlight>.",
     "languagesTitle": "Limbi",
     "native": "Nativ",
     "levelB1": "B1"
@@ -31,7 +31,17 @@
     "title": "Stack Tehnic",
     "languages": "Limbaje",
     "frameworks": "Framework-uri și Biblioteci",
-    "devops": "DevOps și Instrumente"
+    "devops": "DevOps și Instrumente",
+    "tips": {
+      "sysadmin": "SysAdmin Monitor",
+      "sysadminScraper": "SysAdmin Monitor · InfoJobs Scraper",
+      "sysadminPortfolio": "SysAdmin Monitor · Portofoliu",
+      "infomesideesFCT": "Stagiu la Infomesidees",
+      "portfolio": "Portofoliu",
+      "scraper": "InfoJobs Scraper",
+      "allProjects": "Toate proiectele",
+      "onesystemFCT": "Stagiu la One System"
+    }
   },
   "projects": {
     "title": "Proiecte",
@@ -39,8 +49,8 @@
     "error": "Nu s-au putut încărca proiectele.",
     "noDescription": "Fără descriere",
     "descriptions": {
-      "SysAdmin-Monitor": "Sistem de monitorizare în timp real. Backend în Java cu Spring Boot, agent în Python, frontend cu Chart.js și implementare cu Docker Compose.",
-      "Scraper-InfoJobs-Python": "Bot de automatizare pentru extragerea ofertelor de muncă de pe InfoJobs. Folosește Selenium cu detectarea captcha-urilor și export în CSV."
+      "SysAdmin-Monitor": "Sistem de monitorizare în timp real. API REST cu Java Spring Boot și PostgreSQL, agent în Python (psutil), dashboard cu JavaScript și Chart.js, deploy cu Docker Compose și CI/CD cu GitHub Actions.",
+      "Scraper-InfoJobs-Python": "Bot în Python cu Selenium pentru extragerea ofertelor de muncă de pe InfoJobs. Design modular cu 6 module independente, detectare captcha, Dataclasses, export CSV/JSON, sistem de istoric și autodetecție Chrome."
     }
   },
   "experience": {
@@ -50,9 +60,9 @@
       "company": "Infomesidees",
       "date": "Sept 2024 — Apr 2025",
       "badge": "Stagiu FCT",
-      "task1": "Crearea de site-uri web corporative și e-commerce cu WordPress și WooCommerce.",
+      "task1": "Dezvoltarea a peste 20 de site-uri web corporative și e-commerce cu WordPress și WooCommerce, coordonând sarcinile cu Asana (Kanban).",
       "task2": "Personalizarea backend-ului cu PHP și configurarea serverului (.htaccess).",
-      "task3": "Optimizarea performanței: îmbunătățirea timpurilor de încărcare și Core Web Vitals."
+      "task3": "Optimizarea performanței (WPO): îmbunătățirea timpurilor de încărcare și Core Web Vitals."
     },
     "job2": {
       "role": "Tehnician Suport IT și Sisteme",

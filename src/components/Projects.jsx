@@ -35,9 +35,9 @@ function Projects() {
       if (!res.ok) throw new Error('GitHub API error')
       const data = await res.json()
 
-      // quitamos forks y el propio repo del portfolio
+      // quitamos forks y repo de readme personal
       const filtered = data.filter(
-        (repo) => !repo.fork && repo.name !== 'Portfolio-Web'
+        (repo) => !repo.fork && repo.name !== 'DevJuanCR'
       )
 
       // para cada repo sacamos el desglose de lenguajes

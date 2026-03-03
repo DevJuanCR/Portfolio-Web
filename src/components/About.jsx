@@ -52,8 +52,18 @@ function About() {
                   components={{ highlight: <Highlight /> }}
                 />
               </p>
-              <p>{t('about.p2')}</p>
-              <p>{t('about.p3')}</p>
+              <p>
+                <Trans
+                  i18nKey="about.p2"
+                  components={{ highlight: <Highlight /> }}
+                />
+              </p>
+              <p>
+                <Trans
+                  i18nKey="about.p3"
+                  components={{ highlight: <Highlight /> }}
+                />
+              </p>
 
               {/* idiomas que hablo */}
               <div className="pt-4">

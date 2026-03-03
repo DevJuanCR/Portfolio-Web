@@ -9,14 +9,14 @@
   },
   "hero": {
     "greeting": "Hola, soc",
-    "subtitle": "Desenvolupador Junior · Java · Python · JavaScript",
+    "subtitle": "Desenvolupador Full Stack Junior · Java · JavaScript · React · Python",
     "status": "Disponible per treballar"
   },
   "about": {
     "title": "Sobre mi",
-    "p1": "Desenvolupador Junior amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMX)</highlight>.",
-    "p2": "Construeixo serveis backend amb Java i Spring Boot, desenvolupo eines i aplicacions amb Python, i creo frontends interactius amb JavaScript i React.",
-    "p3": "Treballo amb Docker, pipelines CI/CD i entorns Linux. M'agrada construir solucions reals i aprendre el que calgui pel camí.",
+    "p1": "Desenvolupador <highlight>Full Stack Junior</highlight> amb doble titulació tècnica en <highlight>Desenvolupament d'Aplicacions Multiplataforma (DAM)</highlight> i <highlight>Sistemes Microinformàtics i Xarxes (SMX)</highlight>.",
+    "p2": "He desenvolupat i desplegat projectes complets amb <highlight>Java Spring Boot</highlight>, <highlight>React</highlight> i <highlight>Python</highlight>, amb contenidorització <highlight>Docker</highlight>, CI/CD amb <highlight>GitHub Actions</highlight> i desplegament a <highlight>Vercel</highlight>.",
+    "p3": "Perfil híbrid que combina desenvolupament amb coneixement real d'<highlight>infraestructura, xarxes i administració de servidors Linux</highlight>.",
     "languagesTitle": "Idiomes",
     "native": "Natiu",
     "levelB1": "B1"
@@ -31,7 +31,17 @@
     "title": "Stack Tècnic",
     "languages": "Llenguatges",
     "frameworks": "Frameworks i Llibreries",
-    "devops": "DevOps i Eines"
+    "devops": "DevOps i Eines",
+    "tips": {
+      "sysadmin": "SysAdmin Monitor",
+      "sysadminScraper": "SysAdmin Monitor · InfoJobs Scraper",
+      "sysadminPortfolio": "SysAdmin Monitor · Portafoli",
+      "infomesideesFCT": "Pràctiques a Infomesidees",
+      "portfolio": "Portafoli",
+      "scraper": "InfoJobs Scraper",
+      "allProjects": "Tots els projectes",
+      "onesystemFCT": "Pràctiques a One System"
+    }
   },
   "projects": {
     "title": "Projectes",
@@ -39,8 +49,8 @@
     "error": "No s'han pogut carregar els projectes.",
     "noDescription": "Sense descripció",
     "descriptions": {
-      "SysAdmin-Monitor": "Sistema de monitorització en temps real. Backend en Java amb Spring Boot, agent en Python, frontend amb Chart.js i desplegament amb Docker Compose.",
-      "Scraper-InfoJobs-Python": "Bot d'automatització per a l'extracció d'ofertes de treball a InfoJobs. Usa Selenium amb detecció de captchas i exportació a CSV."
+      "SysAdmin-Monitor": "Sistema de monitorització en temps real. API REST amb Java Spring Boot i PostgreSQL, agent en Python (psutil), dashboard amb JavaScript i Chart.js, desplegament amb Docker Compose i CI/CD amb GitHub Actions.",
+      "Scraper-InfoJobs-Python": "Bot en Python amb Selenium per a l'extracció d'ofertes de treball a InfoJobs. Disseny modular amb 6 mòduls independents, detecció de captchas, Dataclasses, exportació a CSV/JSON, sistema d'historial i autodetecció de Chrome."
     }
   },
   "experience": {
@@ -50,9 +60,9 @@
       "company": "Infomesidees",
       "date": "Set 2024 — Abr 2025",
       "badge": "Pràctiques FCT",
-      "task1": "Creació de llocs web corporatius i e-commerce amb WordPress i WooCommerce.",
+      "task1": "Desenvolupament de més de 20 llocs web corporatius i e-commerce amb WordPress i WooCommerce, coordinant tasques amb Asana (Kanban).",
       "task2": "Personalització del backend amb PHP i configuració de servidor (.htaccess).",
-      "task3": "Optimització de rendiment: millora de temps de càrrega i Core Web Vitals."
+      "task3": "Optimització de rendiment (WPO): millora de temps de càrrega i Core Web Vitals."
     },
     "job2": {
       "role": "Tècnic de Suport IT i Sistemes",

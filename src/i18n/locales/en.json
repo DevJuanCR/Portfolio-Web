@@ -9,14 +9,14 @@
   },
   "hero": {
     "greeting": "Hey, I'm",
-    "subtitle": "Junior Developer · Java · Python · JavaScript",
+    "subtitle": "Junior Full Stack Developer · Java · JavaScript · React · Python",
     "status": "Open to work"
   },
   "about": {
     "title": "About Me",
-    "p1": "Junior Developer with a double technical degree in <highlight>Multiplatform Application Development</highlight> and <highlight>IT Systems & Networking</highlight>.",
-    "p2": "I build backend services with Java and Spring Boot, develop tools and applications with Python, and create interactive frontends with JavaScript and React.",
-    "p3": "I enjoy working with Docker, CI/CD pipelines, and Linux environments. I like building real-world solutions and learning whatever is needed along the way.",
+    "p1": "Junior <highlight>Full Stack Developer</highlight> with a double technical degree in <highlight>Multiplatform Application Development</highlight> and <highlight>IT Systems & Networking</highlight>.",
+    "p2": "I've built and deployed complete projects with <highlight>Java Spring Boot</highlight>, <highlight>React</highlight> and <highlight>Python</highlight>, using <highlight>Docker</highlight> containerization, CI/CD with <highlight>GitHub Actions</highlight> and deployment on <highlight>Vercel</highlight>.",
+    "p3": "Hybrid profile combining development with hands-on knowledge of <highlight>infrastructure, networking and Linux server administration</highlight>.",
     "languagesTitle": "Languages",
     "native": "Native",
     "levelB1": "B1"
@@ -31,7 +31,17 @@
     "title": "Tech Stack",
     "languages": "Languages",
     "frameworks": "Frameworks & Libraries",
-    "devops": "DevOps & Tools"
+    "devops": "DevOps & Tools",
+    "tips": {
+      "sysadmin": "SysAdmin Monitor",
+      "sysadminScraper": "SysAdmin Monitor · InfoJobs Scraper",
+      "sysadminPortfolio": "SysAdmin Monitor · Portfolio",
+      "infomesideesFCT": "Internship at Infomesidees",
+      "portfolio": "Portfolio",
+      "scraper": "InfoJobs Scraper",
+      "allProjects": "All projects",
+      "onesystemFCT": "Internship at One System"
+    }
   },
   "projects": {
     "title": "Projects",
@@ -39,8 +49,8 @@
     "error": "Could not load projects right now.",
     "noDescription": "No description",
     "descriptions": {
-      "SysAdmin-Monitor": "Real-time monitoring system. Java backend with Spring Boot, Python agent, Chart.js frontend and Docker Compose deployment.",
-      "Scraper-InfoJobs-Python": "Automation bot for extracting job listings from InfoJobs. Uses Selenium with captcha detection and CSV export."
+      "SysAdmin-Monitor": "Real-time monitoring system. REST API with Java Spring Boot and PostgreSQL, Python agent (psutil), JavaScript dashboard with Chart.js, Docker Compose deployment and CI/CD with GitHub Actions.",
+      "Scraper-InfoJobs-Python": "Python bot with Selenium for extracting job listings from InfoJobs. Modular design with 6 independent modules, captcha detection, Dataclasses, CSV/JSON export, history system and Chrome auto-detection."
     }
   },
   "experience": {
@@ -50,9 +60,9 @@
       "company": "Infomesidees",
       "date": "Sept 2024 — Apr 2025",
       "badge": "FCT Internship",
-      "task1": "Built corporate websites and e-commerce stores with WordPress and WooCommerce.",
+      "task1": "Developed over 20 corporate websites and e-commerce stores with WordPress and WooCommerce, coordinating tasks with Asana (Kanban).",
       "task2": "Backend customization with PHP and server configuration (.htaccess).",
-      "task3": "Performance optimization: improved load times and Core Web Vitals."
+      "task3": "Performance optimization (WPO): improved load times and Core Web Vitals."
     },
     "job2": {
       "role": "IT Support & Systems Technician",
